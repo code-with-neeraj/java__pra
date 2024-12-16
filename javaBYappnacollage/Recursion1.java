@@ -1,11 +1,11 @@
 public class Recursion1 {
-    // public static void printNumb(int n){
-    //     if(n == 0){
-    //         return;
-    //     }
-    //     System.out.println(n);
-    //     printNumb(n-1);
-    // }
+    public static void printNumb(int n){
+        if(n == 0){
+            return;
+        }
+        System.out.println(n);
+        printNumb(n-1);
+    }
 
 
     // public static void printNumb(int n){
@@ -16,35 +16,35 @@ public class Recursion1 {
     //     printNumb(n+1);
     // }
 
-    // public static void printSum(int i, int n, int sum){
-    //     if(i == n){
-    //         sum +=i;
-    //         System.out.println(sum);
-    //         return;
-    //     }
-    //     sum += i;
-    //     printSum(i+1, n, sum);  
-    //     System.out.println(i);
-    // }
+    public static void printSum(int i, int n, int sum){
+        if(i == n){
+            sum +=i;
+            System.out.println(sum);
+            return;
+        }
+        sum += i;
+        printSum(i+1, n, sum);  
+        System.out.println(i);
+    }
 
-    // public static int calcfactorial(int n){
-    //     if(n == 1 || n == 0){
-    //         return 1;
-    //     }
-    //     int fact_nm1 = calcfactorial(n-1);
-    //     int fact_n = n * fact_nm1;
-    //     return fact_n;
-    // }
+    public static int calcfactorial(int n){
+        if(n == 1 || n == 0){
+            return 1;
+        }
+        int fact_nm1 = calcfactorial(n-1);
+        int fact_n = n * fact_nm1;
+        return fact_n;
+    }
 
 
-    // public static void prinFib(int a, int b, int n){
-    //     if(n == 0){
-    //         return;
-    //     }
-    //     int c = a + b;
-    //     System.out.println(c);
-    //     prinFib(b, c, n-1);
-    // }
+    public static void prinFib(int a, int b, int n){
+        if(n == 0){
+            return;
+        }
+        int c = a + b;
+        System.out.println(c);
+        prinFib(b, c, n-1);
+    }
 
     public static int calcPower(int x, int n){
         if(n == 0) { //base case 1

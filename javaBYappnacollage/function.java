@@ -1,10 +1,5 @@
 
 import java.util.Scanner;
-
-
-
-
-
 public class function {
     public static void printMyName(String name) {
         System.out.println(name);
