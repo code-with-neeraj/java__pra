@@ -44,12 +44,12 @@ public class DFS1 {
         System.out.print(curr+" ");
         vis[curr] = true;
 
-        for(int i=0; i<graph[curr].size(); i++){
+        for(int i=0; i<graph[curr].size(); i++) {
             Edge e = graph[curr].get(i);
-            if(vis[e.dest] == false)
+            if(vis[e.dest] == false) {
                 dfs(graph, e.dest, vis);
+            }
         }
-
     }
     public static void main(String[] args) {
         int V = 7;

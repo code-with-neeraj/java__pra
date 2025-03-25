@@ -42,12 +42,13 @@ public class BFS {
 
         graph[5].add(new Edge(6, 5));
     }
-    public static void bfs(ArrayList<Edge> graph[], int V) {
+
+    public static void bfs(ArrayList<Edge> graph[], int V){
         Queue<Integer> q = new LinkedList<>();
         boolean vis[] = new boolean[V];
         q.add(0);
 
-        while(!q.isEmpty()) {
+        while(!q.isEmpty()){
             int curr = q.remove();
             if(vis[curr] == false){
                 System.out.print(curr+" ");
@@ -60,11 +61,12 @@ public class BFS {
             }
         }
     }
+   
     public static void main(String[] args) {
         int V = 7;
         /*
             1 --- 3
-           /     | \
+           /      | \
            0         5 --- 6
            \      | /
             2 --- 4
@@ -73,6 +75,8 @@ public class BFS {
         createGraph(graph);
         bfs(graph, V);
         System.out.println();
+
+       
     }
     
 }

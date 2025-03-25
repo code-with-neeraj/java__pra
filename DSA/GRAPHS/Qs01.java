@@ -42,20 +42,21 @@ public class Qs01 {
 
     //0(V^V)
     public static void printAllPath(ArrayList<Edge> graph[], boolean vis[], int curr, String path, int tar){
-        if(curr == tar) {
+        if(curr == tar){
             System.out.println(path);
             return;
         }
 
-        for(int i=0; i<graph[curr].size(); i++){
+        for(int i=0; i<graph[curr].size(); i++) {
             Edge e = graph[curr].get(i);
-            if(!vis[e.dest]) {
+            if(!vis[e.dest]){
                 vis[curr] = true;
                 printAllPath(graph, vis, e.dest, path+e.dest, tar);
                 vis[curr] = false;
             }
         }
     }
+ 
     public static void main(String[] args) {
         // All paths from source to target--->
         // for given src & tar, print all paths that exist from src to tar
